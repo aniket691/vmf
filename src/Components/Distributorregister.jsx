@@ -27,7 +27,7 @@ const Register = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/users/register", {
+      const response = await fetch("http://maze-backend-production.up.railway.appusers/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),

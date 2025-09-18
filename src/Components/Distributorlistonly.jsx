@@ -43,7 +43,7 @@ const UserTable = () => {
   });
   const navigate = useNavigate();
 
-  const apiUrl = "http://localhost:3000/users/distributors";
+  const apiUrl = "http://maze-backend-production.up.railway.app/users/distributors";
 
   useEffect(() => {
     fetchDistributors();
@@ -66,7 +66,7 @@ const UserTable = () => {
   const checkEmailExists = async (email) => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/users/check-email/${email}`,
+        `http://maze-backend-production.up.railway.app/users/check-email/${email}`,
         { timeout: 30000 }
       );
       return response.data.exists;
@@ -296,7 +296,7 @@ const UserTable = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/users/register",
+        "http://maze-backend-production.up.railway.appusers/register",
         formDataToSend,
         {
           headers: {
@@ -347,7 +347,7 @@ const UserTable = () => {
     try {
       if (updatedPassword) {
         await axios.patch(
-          `http://localhost:3000/users/password/${id}`,
+          `http://maze-backend-production.up.railway.app/users/password/${id}`,
           { newPassword: updatedPassword },
           { timeout: 30000 }
         );
@@ -410,7 +410,7 @@ const UserTable = () => {
       });
 
       try {
-        await axios.delete(`http://localhost:3000/users/delete/${id}`, {
+        await axios.delete(`http://maze-backend-production.up.railway.app/users/delete/${id}`, {
           timeout: 30000,
         });
 
@@ -444,7 +444,7 @@ const UserTable = () => {
       );
 
       await axios.patch(
-        `http://localhost:3000/users/status/${id}`,
+        `http://maze-backend-production.up.railway.app/users/status/${id}`,
         { status: newStatus },
         { timeout: 30000 }
       );
@@ -467,7 +467,7 @@ const UserTable = () => {
   };
   const updateEditRequestStatus = async (id, newStatus) => {
     try {
-      await axios.patch(`http://localhost:3000/users/request-edit/${id}`, {
+      await axios.patch(`http://maze-backend-production.up.railway.app/users/request-edit/${id}`, {
         status: newStatus,
       });
       setDistributors((prev) =>
