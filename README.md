@@ -1,5 +1,7 @@
 # Vendor Management Frontend
 
+# Deployed Link: [MAZEDAKHLE](https://euphonious-bombolone-63bf12.netlify.app/)
+
 This project is a **React + Vite** application designed for managing vendors efficiently. It provides a fast and modern frontend setup with Hot Module Replacement (HMR) and optimized build performance.
 
 ## Features
